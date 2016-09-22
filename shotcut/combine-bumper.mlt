@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mlt LC_NUMERIC="C" version="6.3.0" title="Shotcut version 16.09.01" producer="main bin">
+  <profile description="automatic" width="1280" height="720" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="1280" display_aspect_den="720" frame_rate_num="25" frame_rate_den="1" colorspace="709"/>
+  <playlist id="main bin" title="Shotcut version 16.09.01">
+    <property name="xml_retain">1</property>
+  </playlist>
+  <producer id="black" in="00:00:00.000" out="00:00:31.480">
+    <property name="length">00:00:31.520</property>
+    <property name="eof">pause</property>
+    <property name="resource">black</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00.000" out="00:00:31.480"/>
+  </playlist>
+  <producer id="producer0" title="Anonymous Submission" in="00:00:00.000" out="00:00:14.200">
+    <property name="length">00:00:14.240</property>
+    <property name="eof">pause</property>
+    <property name="resource">/Users/irfanpule/Documents/proyek/openSUSE/bumper-video-openSUSE/render/bumper_openSUSE_AsiaSummit.mp4</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">f8091f35b03e2cc632e7d56842ce66ff</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">bumper_openSUSE_AsiaSummit.mp4</property>
+    <property name="shotcut:detail">/Users/irfanpule/Documents/proyek/openSUSE/bumper-video-openSUSE/render/bumper_openSUSE_AsiaSummit.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer1" title="Anonymous Submission" in="00:00:00.000" out="00:00:19.000">
+    <property name="length">00:00:19.040</property>
+    <property name="eof">pause</property>
+    <property name="resource">/Users/irfanpule/Documents/proyek/openSUSE/bumper-video-openSUSE/render/bumper_openSUSE.mp4</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">d7a1d111fbd318deea773d4984778d4b</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">bumper_openSUSE.mp4</property>
+    <property name="shotcut:detail">/Users/irfanpule/Documents/proyek/openSUSE/bumper-video-openSUSE/render/bumper_openSUSE.mp4</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <playlist id="playlist0">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V1</property>
+    <entry producer="producer0" in="00:00:00.000" out="00:00:14.200"/>
+    <entry producer="producer1" in="00:00:00.800" out="00:00:18.040"/>
+  </playlist>
+  <producer id="producer2" title="Anonymous Submission" in="00:00:00.000" out="00:01:47.960">
+    <property name="length">00:01:48.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">/Users/irfanpule/Documents/proyek/openSUSE/bumper-video-openSUSE/audio/The_Muffin_Man_Instrumental.mp3</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="shotcut:hash">02c30a0700167eeefd2c9bdcebff211a</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:caption">The_Muffin_Man_Instrumental.mp3</property>
+    <property name="shotcut:detail">/Users/irfanpule/Documents/proyek/openSUSE/bumper-video-openSUSE/audio/The_Muffin_Man_Instrumental.mp3</property>
+    <property name="shotcut:comment"></property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <filter id="filter0" out="00:00:00.960">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeInVolume</property>
+      <property name="gain">0</property>
+      <property name="end">1</property>
+    </filter>
+    <filter id="filter1" in="00:00:30.520" out="00:00:31.480">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="gain">1</property>
+      <property name="end">0</property>
+    </filter>
+  </producer>
+  <playlist id="playlist1">
+    <property name="shotcut:audio">1</property>
+    <property name="shotcut:name">A1</property>
+    <entry producer="producer2" in="00:00:00.000" out="00:00:31.480"/>
+  </playlist>
+  <tractor id="tractor0" title="Shotcut version 16.09.01" global_feed="1" in="00:00:00.000" out="00:00:31.480">
+    <property name="shotcut">1</property>
+    <property name="shotcut:scaleFactor">0.800004</property>
+    <track producer="background"/>
+    <track producer="playlist0"/>
+    <track producer="playlist1" hide="video"/>
+    <transition id="transition0">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="combine">1</property>
+    </transition>
+    <transition id="transition1">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="version">0.9</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="disable">1</property>
+    </transition>
+    <transition id="transition2">
+      <property name="a_track">0</property>
+      <property name="b_track">2</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="combine">1</property>
+    </transition>
+  </tractor>
+</mlt>
